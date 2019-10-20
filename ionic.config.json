@@ -1,0 +1,7 @@
+{
+  "name": "teammanager",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
