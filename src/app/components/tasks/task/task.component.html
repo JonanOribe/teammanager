@@ -1,6 +1,6 @@
 <div class="card mt-5">
   <div class="card-body">
-    <form #productForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
 
       <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="taskService.selectedTask.$key">
 

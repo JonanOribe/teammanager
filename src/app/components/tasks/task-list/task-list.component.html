@@ -1,3 +1,21 @@
-<p>
-  task-list works!
-</p>
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">List of task</h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let task of taskList">
+          <td>{{task.name}}</td>
+          <td>{{task.location}}</td>
+          <td>
+            <a calss="btn btn-secondary text-white" (click)="onEdit(task)">
+            <i class="far fa-edit">Editar </i>
+          </a>
+          <a calss="btn btn-danger text-white" (click)="onDelete(task.$key)">
+              <i class="fas fa-trash-alt">Eliminar </i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
