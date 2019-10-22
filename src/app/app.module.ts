@@ -22,8 +22,13 @@ import {ProductsComponent} from './components/products/products.component';
 import {ProductListComponent} from './components/products/product-list/product-list.component';
 import {ProductComponent} from './components/products/product/product.component';
 
+import {TasksComponent} from './components/tasks/tasks.component';
+import {TaskListComponent} from './components/tasks/task-list/task-list.component';
+import {TaskComponent} from './components/tasks/task/task.component';
+
 //Services
 import {ProductService} from './services/product.service'
+import {TaskService} from './services/task.service'
 
 import{FormsModule} from '@angular/forms'
 
@@ -31,7 +36,10 @@ import{FormsModule} from '@angular/forms'
   declarations: [AppComponent,
     ProductsComponent,
     ProductListComponent,
-    ProductComponent
+    ProductComponent,
+    TasksComponent,
+    TaskListComponent,
+    TaskComponent
 ],
   entryComponents: [],
   imports: [
@@ -48,7 +56,8 @@ import{FormsModule} from '@angular/forms'
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    ProductService
+    ProductService,
+    TaskService
   ],
   bootstrap: [AppComponent]
 })
