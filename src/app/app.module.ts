@@ -26,11 +26,17 @@ import {TasksComponent} from './components/tasks/tasks.component';
 import {TaskListComponent} from './components/tasks/task-list/task-list.component';
 import {TaskComponent} from './components/tasks/task/task.component';
 
+import {ComboBox}  from './components/combo-box/combo-box.component';
+
 //Services
 import {ProductService} from './services/product.service'
 import {TaskService} from './services/task.service'
 
 import{FormsModule} from '@angular/forms'
+
+import { MatSliderModule } from '@angular/material/slider';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material';
 
 @NgModule({
   declarations: [AppComponent,
@@ -39,7 +45,8 @@ import{FormsModule} from '@angular/forms'
     ProductComponent,
     TasksComponent,
     TaskListComponent,
-    TaskComponent
+    TaskComponent,
+    ComboBox
 ],
   entryComponents: [],
   imports: [
@@ -50,7 +57,10 @@ import{FormsModule} from '@angular/forms'
     AngularFireDatabaseModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatSliderModule,
+    MatSelectModule,
+    MatInputModule
   ],
   providers: [
     StatusBar,
