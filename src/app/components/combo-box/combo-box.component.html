@@ -1,7 +1,9 @@
 <mat-form-field>
   <mat-label>Select location</mat-label>
   <mat-select>
-    <mat-option *ngFor="let place of places" [value]="place.value">
+    <mat-option *ngFor="let place of places" [value]="place.value" name="location"
+    #location="ngModel"
+    [(ngModel)]="taskService.selectedTask.location" (change)="changeClient2($event.value)" ngDefaultControl>
       {{place.viewValue}}
     </mat-option>
   </mat-select>

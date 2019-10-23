@@ -12,7 +12,7 @@
         [(ngModel)]="taskService.selectedTask.name"
         placeholder="Add Task Name">
       </div>
-
+<!--
       <div class="form-group">
         <input type="text"
         class="form-control"
@@ -22,6 +22,23 @@
         placeholder="Add Location">
       </div>
 
+    -->
+    <!--
+      <div class="form-group">
+        <app-combo-box></app-combo-box>
+      </div>
+-->
+<div class="form-group">
+  <select  class="form-control"
+  name="location"
+  #location="ngModel"
+  [(ngModel)]="taskService.selectedTask.location"
+  placeholder="Add Location">
+    <option value="Abando 54, 3ºB">Abando 54, 3ºB</option>
+    <option value="Basurto a Castrejana 53, 2ºC">Basurto a Castrejana 53, 2ºC</option>
+    <option value="Miribilla 12, 4º IZQ">Miribilla 12, 4º IZQ</option>
+  </select>
+</div>
       <div class="form-group">
         <input type="text"
         class="form-control"

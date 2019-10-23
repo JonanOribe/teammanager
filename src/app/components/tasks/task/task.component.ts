@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../../../services/task.service';
 import { NgForm } from '@angular/forms';
 import { Task } from 'src/app/models/task';
-import { of } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
