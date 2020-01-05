@@ -12,6 +12,8 @@ import { ToastrModule } from 'ngx-toastr'
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { ChartsModule } from 'ng2-charts';
+
 //Firebase
 import {AngularFireDatabaseModule} from'angularfire2/database';
 import {AngularFireModule} from 'angularfire2';
@@ -29,6 +31,7 @@ import {TaskComponent} from './components/tasks/task/task.component';
 import {ComboBox}  from './components/combo-box/combo-box.component';
 
 import {CalendarComponent}  from './components/calendar/calendar.component';
+import {PieChartComponent}  from './components/pie-chart/pie-chart.component';
 
 //Services
 import {ProductService} from './services/product.service'
@@ -49,7 +52,8 @@ import {MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angula
     TaskListComponent,
     TaskComponent,
     ComboBox,
-    CalendarComponent
+    CalendarComponent,
+    PieChartComponent
 ],
   entryComponents: [],
   imports: [
@@ -65,7 +69,8 @@ import {MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angula
     MatSelectModule,
     MatInputModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    ChartsModule
   ],
   providers: [
     StatusBar,

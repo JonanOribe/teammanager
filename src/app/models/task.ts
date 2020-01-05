@@ -3,4 +3,5 @@ export class Task {
     name: string;
     location: string;
     hours: number;
+    date: string="";
 }

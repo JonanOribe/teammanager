@@ -1,31 +1,15 @@
 <ion-app>
-<!--  <ion-split-pane>
-    <ion-menu type="overlay">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet main></ion-router-outlet>
-  </ion-split-pane>
-  -->
-
   <nav class="navbar navbar-dark bg-dark">
-    <a href="/" class="navbar-brand">NgProducts</a>
+    <a href="/" class="navbar-brand">Team Manager</a>
   </nav>
-  <!--<app-products></app-products>-->
-  <app-tasks></app-tasks>
+  <ion-content
+  [scrollEvents]="true"
+  (ionScrollStart)="logScrollStart()"
+  (ionScroll)="logScrolling($event)"
+  (ionScrollEnd)="logScrollEnd()">
+</ion-content>
+<div class="scrollbar scrollbar-primary">
+    <div class="force-overflow"></div>
+    <app-tasks></app-tasks>
+  </div>
 </ion-app>
