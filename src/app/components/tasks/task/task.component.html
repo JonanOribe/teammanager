@@ -1,6 +1,6 @@
 <div class="card mt-5">
   <div class="card-body">
-    <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)">
+    <form #taskForm="ngForm" (ngSubmit)="onSubmit(taskForm)" ngNativeValidate>
 
       <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="taskService.selectedTask.$key">
 
@@ -14,6 +14,7 @@
           <option value="Limpieza habitacion">Limpieza habitación</option>
           <option value="Cristaleria">Cristaleria</option>
           <option value="Desatascos">Desatascos</option>
+          <option value="Jardineria">Jardineria</option>
         </select>
       </div>
 
