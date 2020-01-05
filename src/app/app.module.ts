@@ -28,15 +28,17 @@ import {TaskComponent} from './components/tasks/task/task.component';
 
 import {ComboBox}  from './components/combo-box/combo-box.component';
 
+import {CalendarComponent}  from './components/calendar/calendar.component';
+
 //Services
 import {ProductService} from './services/product.service'
 import {TaskService} from './services/task.service'
 
 import{FormsModule} from '@angular/forms'
 
-import { MatSliderModule } from '@angular/material/slider';
+import {MatSliderModule} from '@angular/material/slider';
 import {MatSelectModule} from '@angular/material/select';
-import {MatInputModule} from '@angular/material';
+import {MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [AppComponent,
@@ -46,7 +48,8 @@ import {MatInputModule} from '@angular/material';
     TasksComponent,
     TaskListComponent,
     TaskComponent,
-    ComboBox
+    ComboBox,
+    CalendarComponent
 ],
   entryComponents: [],
   imports: [
@@ -60,7 +63,9 @@ import {MatInputModule} from '@angular/material';
     ToastrModule.forRoot(),
     MatSliderModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [
     StatusBar,
