@@ -5,47 +5,39 @@
       <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="taskService.selectedTask.$key">
 
       <div class="form-group">
-        <input type="text"
-        class="form-control"
+        <select  class="form-control"
         name="name"
-        #name="ngModel"
+        #location="ngModel"
         [(ngModel)]="taskService.selectedTask.name"
-        placeholder="Add Task Name">
+        placeholder="Add Task"
+        required>
+          <option value="Limpieza habitacion">Limpieza habitación</option>
+          <option value="Cristaleria">Cristaleria</option>
+          <option value="Desatascos">Desatascos</option>
+        </select>
       </div>
-<!--
+
       <div class="form-group">
-        <input type="text"
-        class="form-control"
+        <select  class="form-control"
         name="location"
         #location="ngModel"
         [(ngModel)]="taskService.selectedTask.location"
-        placeholder="Add Location">
-      </div>
+        placeholder="Add Location"
+        required>
+          <option value="Abando 54, 3ºB">Abando 54, 3ºB</option>
+          <option value="Basurto a Castrejana 53, 2ºC">Basurto a Castrejana 53, 2ºC</option>
+          <option value="Miribilla 12, 4º IZQ">Miribilla 12, 4º IZQ</option>
+        </select>
 
-    -->
-    <!--
-      <div class="form-group">
-        <app-combo-box></app-combo-box>
       </div>
--->
-<div class="form-group">
-  <select  class="form-control"
-  name="location"
-  #location="ngModel"
-  [(ngModel)]="taskService.selectedTask.location"
-  placeholder="Add Location">
-    <option value="Abando 54, 3ºB">Abando 54, 3ºB</option>
-    <option value="Basurto a Castrejana 53, 2ºC">Basurto a Castrejana 53, 2ºC</option>
-    <option value="Miribilla 12, 4º IZQ">Miribilla 12, 4º IZQ</option>
-  </select>
-</div>
       <div class="form-group">
-        <input type="text"
+        <input type="number"
         class="form-control"
         name="hours"
         #hours="ngModel"
         [(ngModel)]="taskService.selectedTask.hours"
-        placeholder="Add Hours">
+        placeholder="Add Hours"
+        required>
       </div>
 
       <div class="form-group">
